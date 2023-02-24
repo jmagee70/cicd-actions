@@ -1,0 +1,11 @@
+name: firstcicd
+on: workflow_dispatch
+jobs:
+  first ci-job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Greeting
+        run: echo "hello world
+      - name: Print goodbye
+        run: echo "goodbye world"
+    
