@@ -18,4 +18,4 @@ jobs:
       env:
         PRISMA_API_URL: https://api2.eu.prismacloud.io
       with:
-          api-key: ${{ 362f773c-a46c-4634-9786-1a35fbf9f8c1::KgHCdrsNaQ16IPdGGKF0uG9A9e0=}}
+          api-key: ${{secrets.362f773c-a46c-4634-9786-1a35fbf9f8c1::KgHCdrsNaQ16IPdGGKF0uG9A9e0=}}
