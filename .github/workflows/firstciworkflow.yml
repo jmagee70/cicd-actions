@@ -1,7 +1,7 @@
 name: firstcicd
 on: workflow_dispatch
 jobs:
-  first ci-job
+  check-bats-version:
     runs-on: ubuntu-latest
     steps:
       - name: Print Greeting
