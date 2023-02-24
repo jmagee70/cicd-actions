@@ -10,6 +10,10 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 18
+    - name: Install DEpendencies
+      run: npm ci
+    - name: Run tets
+      run: npm test
     - name: Checkout repo
       uses: actions/checkout@v2
       
