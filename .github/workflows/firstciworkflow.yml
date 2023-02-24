@@ -10,5 +10,12 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 18
-        
-     
+    - name: Checkout repo
+      uses: actions/checkout@v2
+    - name: Run Bridgecrew 
+      id: Bridgecrew
+      uses: bridgecrewio/bridgecrew-action@master 
+      env:
+        PRISMA_API_URL: https://api2.eu.prismacloud.io
+      with:
+          api-key: ${{ 362f773c-a46c-4634-9786-1a35fbf9f8c1::KgHCdrsNaQ16IPdGGKF0uG9A9e0=}}
