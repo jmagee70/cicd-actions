@@ -1,4 +1,4 @@
-name: cicdactions2
+name: deploy cicd actions
 on: push
 jobs: 
   test:
@@ -16,7 +16,21 @@ jobs:
       run: npm test
     - name: Checkout repo
       uses: actions/checkout@v2
-      
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get code
+      uses: actions/checkout@v3
+    - name: Install NodeJS
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+    - name: Install DEpendencies
+      run: npm ci
+    - name: Build Project
+      run: npm run build
+    - name: Deploy
+      run: echo "deploying ......"
     - name: Run Bridgecrew 
       id: Bridgecrew
       uses: bridgecrewio/bridgecrew-action@master 
