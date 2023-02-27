@@ -17,6 +17,7 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v2
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
     - name: Get code
@@ -32,6 +33,7 @@ jobs:
     - name: Deploy
       run: echo "deploying ......"
   validate:
+    needs: [test, deploy]
     runs-on: ubuntu-latest
     steps:
     - name: Run Bridgecrew 
