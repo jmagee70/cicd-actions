@@ -1,5 +1,5 @@
 name: deploy cicd actions
-on: push
+on: [push, workflow_dispatch]
 jobs: 
   test:
     needs: validate
